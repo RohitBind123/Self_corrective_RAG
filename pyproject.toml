@@ -1,0 +1,46 @@
+[project]
+name = "crag"
+version = "0.1.0"
+description = "A Corrective RAG project using local LLMs."
+authors = [{ name = "Gemini", email = "gemini@google.com" }]
+dependencies = [
+    "langchain",
+    "langchain_community",
+    "langchain_core",
+    "langchain-nomic",
+    "langchain_openai",
+    "langgraph",
+    "langchainhub",
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "scikit-learn",
+    "tavily-python",
+    "tiktoken",
+    "nomic[local]",
+    "langchain-ollama",
+    "beautifulsoup4",
+    "dill",
+    "dill",
+    "langserve",
+    "sse-starlette",
+]
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+
+allow-direct-references = true
+
+
+
+[tool.hatch.build.targets.wheel]
+
+packages = ["src/crag"]
